@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WritersService } from '../../services/writers.service';
+import { Writer } from '../../interfaces/iWriter.interface';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { WritersService } from '../../services/writers.service';
 })
 export class WritersComponent implements OnInit {
 
-  writers: any[] = [];
+  writers: Writer[] = [];
   constructor(private _writersService: WritersService) {
 
   }
