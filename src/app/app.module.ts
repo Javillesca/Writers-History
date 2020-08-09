@@ -13,6 +13,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { WritersComponent } from './components/writers/writers.component';
+import { WriterComponent } from './components/writer/writer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { WritersComponent } from './components/writers/writers.component';
     NavbarComponent,
     HomeComponent,
     AboutComponent,
-    WritersComponent
+    WritersComponent,
+    WriterComponent
   ],
   imports: [
     BrowserModule,

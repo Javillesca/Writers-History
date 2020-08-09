@@ -6,4 +6,5 @@ export interface Writer{
     birthday: string;
     daydeath: string;
     born: string;
+    phrases: string[];
 }

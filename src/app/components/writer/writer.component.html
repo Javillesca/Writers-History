@@ -1,0 +1,22 @@
+<div class="container animated fadeIn fast">
+    <div class="row">
+        <div class="col-md-4">
+            <img [src]="writer.img" class="img-fluid animated fadeIn" [alt]="writer.name">
+            <br><br>
+            <p><b> Fecha de nacimiento:
+
+            </b> {{ writer.birthday}}</p>
+            <p *ngIf="writer.daydeath !== ''"><b> Fecha de muerte:</b> {{ writer.daydeath}}</p>
+            <p><b> Ciudad de origen:</b> {{ writer.born}}</p>
+            <a [routerLink]="['/writers']" class="btn btn-outline-secondary btn-block">Regresar</a>
+        </div>
+        <div class="col-md-8">
+            <h3 class="animated fadeIn">{{ writer.name}}</h3>
+            <hr>
+            <p>{{ writer.bio}}</p>
+            <ul class="list-group">
+                <li *ngFor="let phare of writer.phrases; let i = index" class="list-group-item">{{ phare }}</li>
+            </ul>
+        </div>
+    </div>
+</div>
