@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { WritersService } from 'src/app/services/writers.service';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html'
