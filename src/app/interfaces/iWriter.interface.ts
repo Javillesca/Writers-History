@@ -1,5 +1,6 @@
 
 export interface Writer{
+    id?: number;
     name: string;
     bio: string;
     img: string;

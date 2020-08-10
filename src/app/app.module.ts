@@ -14,6 +14,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { WritersComponent } from './components/writers/writers.component';
 import { WriterComponent } from './components/writer/writer.component';
+import { SeekerComponent } from './components/shared/seeker/seeker.component';
+import { CardWriterComponent } from './components/shared/card-writer/card-writer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { WriterComponent } from './components/writer/writer.component';
     HomeComponent,
     AboutComponent,
     WritersComponent,
-    WriterComponent
+    WriterComponent,
+    SeekerComponent,
+    CardWriterComponent
   ],
   imports: [
     BrowserModule,

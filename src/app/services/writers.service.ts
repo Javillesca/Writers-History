@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Writer } from '../interfaces/iWriter.interface';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -142,10 +143,8 @@ export class WritersService {
     }
   ];
 
-  constructor() {
-    console.log('Servicio funcionando');
+  constructor(private router: Router) {
   }
-
 
   getWriters(): Writer[] {
     return this.writers;
@@ -153,5 +152,22 @@ export class WritersService {
 
   getWriter( i: number ): Writer {
     return this.writers[i];
+  }
+
+  showWriter(id: number): any {
+    this.router.navigate(['/writer', id]);
+  }
+
+  searchWriters( value: string): Writer[] {
+    let writersArr: Writer[] = [];
+    value = value.toLowerCase();
+
+    for ( let i = 0; i < this.writers.length; i++ ) {
+      if ( this.writers[i].name.toLowerCase().indexOf(value) >= 0 ) {
+        this.writers[i].id = i;
+        writersArr.push(this.writers[i]);
+      }
+    }
+    return writersArr;
   }
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WritersService } from '../../services/writers.service';
 import { Writer } from '../../interfaces/iWriter.interface';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-writers',
@@ -10,8 +9,7 @@ import { Router } from '@angular/router';
 export class WritersComponent implements OnInit {
 
   writers: Writer[] = [];
-  constructor(private _writersService: WritersService,
-              private router: Router) {
+  constructor(private _writersService: WritersService) {
 
   }
 
@@ -21,7 +19,7 @@ export class WritersComponent implements OnInit {
   }
 
   showWriter(i: number): any {
-    this.router.navigate(['/writer', i]);
+     this._writersService.showWriter(i);
   }
 
 }

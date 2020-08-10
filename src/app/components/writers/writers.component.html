@@ -1,15 +1,5 @@
 <h1>Escritores <small> de la historia</small></h1>
 <hr>
 <div class="card-columns">
-    <div class="card animated fadeIn fast" *ngFor="let writer of writers, let i = index">
-        <img class="card-img-top" [src]="writer.img" [alt]="writer.name" height="250">
-        <div class="card-body">
-            <h5 class="card-title">{{ writer.name }}</h5>
-            <p class="card-text">{{ writer.bio }}</p>
-            <p class="card-text"><small class="text-muted"> {{ writer.birthday }} - {{ writer.daydeath }}</small></p>
-        </div>
-        <button (click)="showWriter(i)" type="button" class="btn btn-outline-secondary btn-block">
-            Ver mas...
-        </button>
-    </div>
+    <app-card-writer (writerSelected)="showWriter($event)" [writer]="writer" [index]="i" *ngFor="let writer of writers, let i = index"></app-card-writer>
 </div>

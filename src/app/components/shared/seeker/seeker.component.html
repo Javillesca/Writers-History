@@ -1,0 +1,15 @@
+<h1>Buscando <small> {{ value }}</small></h1>
+<hr>
+
+
+<div class="row animated fadeIn fast" *ngIf="writers.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No se encontraron resultados con la busqueda: {{ value }}
+        </div>
+    </div>
+</div>
+
+<div class="card-columns">
+    <app-card-writer [writer]="writer" [index]="writer.id" *ngFor="let writer of writers"></app-card-writer>
+</div>
