@@ -15,6 +15,7 @@ import { WritersComponent } from './components/writers/writers.component';
 import { WriterComponent } from './components/writer/writer.component';
 import { SeekerComponent } from './components/shared/seeker/seeker.component';
 import { CardWriterComponent } from './components/shared/card-writer/card-writer.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { CardWriterComponent } from './components/shared/card-writer/card-writer
     WritersComponent,
     WriterComponent,
     SeekerComponent,
-    CardWriterComponent
+    CardWriterComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
