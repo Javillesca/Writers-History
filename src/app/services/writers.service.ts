@@ -159,7 +159,7 @@ export class WritersService {
   }
 
   searchWriters( value: string): Writer[] {
-    let writersArr: Writer[] = [];
+    const writersArr: Writer[] = [];
     value = value.toLowerCase();
 
     for ( let i = 0; i < this.writers.length; i++ ) {

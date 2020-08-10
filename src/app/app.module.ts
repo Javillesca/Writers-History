@@ -10,7 +10,6 @@ import { WritersService } from './services/writers.service';
 // Components
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { WritersComponent } from './components/writers/writers.component';
 import { WriterComponent } from './components/writer/writer.component';
@@ -21,7 +20,6 @@ import { CardWriterComponent } from './components/shared/card-writer/card-writer
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeComponent,
     AboutComponent,
     WritersComponent,
     WriterComponent,
